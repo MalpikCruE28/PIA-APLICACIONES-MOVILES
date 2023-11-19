@@ -11,6 +11,17 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./protected-app/inicio/inicio/inicio.module').then( m => m.InicioPageModule)
+  },  {
+    path: 'login',
+    loadChildren: () => import('./auth/login/login/login.module').then( m => m.LoginPageModule)
+  },
+
+  
+
+
 ];
 
 @NgModule({
